@@ -1,17 +1,15 @@
 package com.thoughtworks;
 
-import org.junit.Before;
 import org.junit.Test;
+
+import java.util.Arrays;
+import java.util.List;
 
 import static org.fest.assertions.api.Assertions.assertThat;
 
 public class FizzBuzzGameTest {
     FizzBuzzGame fizzBuzzGame = new FizzBuzzGame();
 
-    @Before
-    public void setup() {
-
-    }
 
     @Test
     public void should_return_wether_num_include_3() {
@@ -43,6 +41,19 @@ public class FizzBuzzGameTest {
         assertThat(fizzBuzzGame.calCorrespondingValOfNum(21)).isEqualTo("FizzWhizz");
 
         assertThat(fizzBuzzGame.calCorrespondingValOfNum(105)).isEqualTo("FizzBuzzWhizz");
+    }
+
+    @Test
+    public void should_return_correct_result() {
+        String [] result = new String[]{"1","2", "Fizz", "4", "Buzz", "Fizz", "Whizz", "8",
+                "Fizz", "Buzz", "11", "Fizz", "Fizz", "Whizz", "FizzBuzz", "16",
+                "17", "Fizz", "19", "Buzz"};
+
+        List<String> resultList = Arrays.asList(result);
+
+        fizzBuzzGame.start(20);
+
+        assertThat(fizzBuzzGame.getResults()).isEqualTo(resultList);
     }
 
 
