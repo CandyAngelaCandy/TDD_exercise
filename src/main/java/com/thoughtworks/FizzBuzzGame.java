@@ -14,6 +14,10 @@ public class FizzBuzzGame {
     public List<String> getResults() {
         return results;
     }
+
+    public String numInclude3(int num) {
+       return null;
+    }
 }
 
 
