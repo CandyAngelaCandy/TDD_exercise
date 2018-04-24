@@ -12,12 +12,28 @@ public class FizzBuzzGame {
     }
 
     public List<String> getResults() {
+
         return results;
     }
 
-    public String numInclude3(int num) {
-       return null;
+    public Boolean isNumInclude3(int num) {
+
+       String strOfNum = Integer.toString(num);
+       if (strOfNum.indexOf("3")!=-1) {
+            return true;
+       }
+
+       return false;
     }
+
+    public String valOfNumInclude3(){
+        return "Fizz";
+    }
+
+    public String calCorrespondingValOfNum(int num) {
+        return Integer.toString(num);
+    }
+
 }
 
 
